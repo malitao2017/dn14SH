@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE struts PUBLIC 
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+	"http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="project" extends="struts-default" namespace="/project">
+		<action name="list" class="com.techstar.project.action.ProjectListAction">
+			<result name="success">/WEB-INF/jsp/project/projectlist.jsp</result>
+		</action>
+		<action name="form">
+			<result name="success">/WEB-INF/jsp/project/projectform.jsp</result>
+		</action>
+		<action name="create" class="com.techstar.project.action.ProjectCreateAction">
+			<result name="input">/WEB-INF/jsp/project/projectform.jsp</result>
+			<result name="success" type="redirectAction">list</result>
+		</action>
+		<action name="delete" class="com.techstar.project.action.ProjectDeleteAction">
+			<result name="success" type="redirectAction">list</result>
+		</action>
+		<action name="load" class="com.techstar.project.action.ProjectLoadAction">
+			<result name="success">/WEB-INF/jsp/project/projectupdateform.jsp</result>
+		</action>
+		<action name="update" class="com.techstar.project.action.ProjectUpdateAction">
+			<result name="success" type="redirectAction">list</result>
+		</action>
+		
+		<action name="ipAddressFilter">
+			<result name="success">/WEB-INF/jsp/project/ipAddressFilter.jsp</result>
+		</action>
+		
+	</package>
+</struts>

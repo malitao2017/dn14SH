@@ -1,0 +1,42 @@
+
+使用 Struts + Hibernate 的形式实现增删改查
+来源：java_hibernate_day01 java_hibernate_day02
+
+访问地址：
+http://localhost:8080/dn14SH/project/list.action
+http://127.0.0.1:8080/dn14SH/project/list.action
+http://172.16.14.186:8080/dn14SH/project/list.action
+
+
+
+页面参考：
+E:\中-Java\0_java_达内\武洁笔记\stuts2\struts_lesson4.1\WebRoot\WEB-INF
+
+完全参考：如OpenSessionInView技术等
+E:\中-Java\0_java_达内\武洁笔记\11_hibernate\day03\hibernate_day03_v2_all\day03\hibernate_lesson3.4_project
+
+ 
+技术方面：
+使用 OpenSessionInView 技术 和ThreadLocal 类
+方法：BaseDao
+途径：Struts2 中使用 拦截器 
+实现：
+1.解决懒加载问题
+2.业务dao中不用写session的关闭方法； 增删改不用手动写事务管理
+原理：
+OpenSessionInView 技术把 Session 的关闭延迟到 View 组件运行完乊后
+
+2016-05-11增加：
+ip地址过滤，部署两套系统，同一个用户，内网中有CURD，外网只能查询
+
+
+
+
+
+
+
+
+
+
+
+
